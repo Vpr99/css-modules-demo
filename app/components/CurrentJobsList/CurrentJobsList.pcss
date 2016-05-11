@@ -1,0 +1,12 @@
+@import '../../css/colors.pcss';
+
+.jobsList {
+    background: var(--white);
+    margin-bottom: 100px;
+    composes: subtle-shadow from 'css/effects.pcss';
+    lost-column: 1;
+
+    & > * + * {
+        border-top: 1px solid var(--mercury);
+    }
+}

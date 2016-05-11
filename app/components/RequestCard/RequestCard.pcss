@@ -1,0 +1,33 @@
+@import '../../css/colors.pcss';
+@import '../../css/layout.pcss';
+
+.card {
+    background: var(--white);
+    border-radius: 2px;
+    composes: subtle-shadow from 'css/effects.pcss';
+    cursor: pointer;
+    lost-column: 1/4;
+    padding: calc(var(--standardUnit) * 2);
+}
+
+.nameRow {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: calc(var(--standardUnit) * 10);
+}
+
+.name {
+    color: var(--anthracite);
+    flex: 1;
+    composes: label-1 from 'css/typography.pcss';
+}
+
+.title {
+    color: var(--silver);
+    composes: label-bold no-margin from 'css/typography.pcss';
+}
+
+.request {
+    color: var(--anthracite);
+    composes: body from 'css/typography.pcss';
+}

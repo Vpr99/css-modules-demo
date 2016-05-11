@@ -1,0 +1,23 @@
+@import '../../css/colors.pcss';
+@import '../../css/layout.pcss';
+
+.base {
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    composes: no-margin from 'css/typography.pcss';
+    display: flex;
+    justify-content: center;
+}
+
+.large {
+    composes: base;
+    composes: label-1 from 'css/typography.pcss';
+    size: calc(var(--standardUnit) * 6);
+}
+
+.medium {
+    composes: base;
+    composes: label-2 from 'css/typography.pcss';
+    size: calc(var(--standardUnit) * 5);
+}

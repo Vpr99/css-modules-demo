@@ -1,0 +1,47 @@
+@import '../../css/colors.pcss';
+@import '../../css/layout.pcss';
+
+.row {
+    align-items: center;
+    display: flex;
+    padding: calc(var(--standardUnit) * 2);
+    lost-column: 1;
+}
+
+.nameRow {
+    flex: 1 1 auto;
+    margin-left: calc(var(--standardUnit) * 2);
+}
+
+.name {
+    composes: label-2 no-margin from 'css/typography.pcss';
+}
+
+.request {
+    color: var(--gray);
+    composes: caption from 'css/typography.pcss';
+}
+
+.timestamp {
+    align-self: flex-start;
+}
+
+.unread {
+    composes: timestamp;
+    display: flex;
+    align-items: center;
+
+    &:before {
+        background: var(--depot);
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: calc(var(--standardUnit) / 2);
+        size: var(--standardUnit);
+        content: '';
+    }
+}
+
+.read {
+    color: var(--silver);
+    composes: timestamp;
+}
